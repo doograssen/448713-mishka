@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Дружининский](https://up.htmlacademy.ru/adaptive/13/user/448713).
-* Наставник: `Неизвестно`.
+* Наставник: `Доработка проекта`.
 
 ---
 
