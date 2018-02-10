@@ -1,9 +1,163 @@
+/*.about-us {
+  border-bottom: 6px solid #f1f1f1;
+}*/
+
+.about-us__title {
+  margin-top: 27px;
+  margin-bottom: 3px;
+}
+
 .about-us__feature-list {
   @include ls-terminate;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: $title-color;
+}
+
+.about-us__item:last-of-type {
+  margin-bottom: 55px;
+}
+
+.about-us__item {
+  display: block;
+}
+
+.about-us__promo {
+  position: relative;
+  padding-top: 83px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  &--flower {
+    width: 185px;
+
+    &::before {
+      background: $flower no-repeat;
+      top: 29px;
+      left: 9px;
+      width: 32px;
+      height: 38px;
+    }
+  }
+
+  &--money {
+    width: 205px;
+
+    &::before {
+      background: $money no-repeat;
+      top: 30px;
+      left: 0;
+      width: 47px;
+      height: 27px;
+    }
+  }
+
+  &--heart {
+    width: 185px;
+
+    &::before {
+      background: $heart no-repeat;
+      background-size: cover;
+      top: 34px;
+      left: 7px;
+      width: 34px;
+      height: 29px;
+    }
+  }
+
+  &--ball {
+    width: 215px;
+
+    &::before {
+      background: $ball no-repeat;
+      left: 3px;
+      top: 32px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &--rocket {
+    width: 255px;
+
+    &::before {
+      background: $rocket no-repeat;
+      top: 32px;
+      left: -7px;
+      width: 55px;
+      height: 24px;
+    }
+  }
+
+  &--present {
+    width: 205px;
+
+    &::before {
+      background: $present no-repeat;
+      top: 30px;
+      left: 2px;
+      width: 33px;
+      height: 33px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us__title {
+    margin-top: 49px;
+    margin-bottom: 20px;
+  }
+
+  .about-us__feature-list {
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    margin-bottom: 97px;
+  }
+
+  .about-us__item {
+    width: 50%;
+    margin-bottom: 28px;
+  }
+
+  .about-us__promo {
+    width: 240px;
+
+    &--flower {
+      width: 230px;
+    }
+
+    &--ball {
+      width: 250px;
+    }
+
+    &--rocket {
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    padding-left: 175px;
+  }
+
+  .about-us__title {
+    margin-top: 58px;
+  }
+
+  .about-us__feature-list {
+    padding-right: 172px;
+  }
 }
 
 @import "response-slider";

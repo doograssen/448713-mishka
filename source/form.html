@@ -9,83 +9,131 @@
 <body>
 <header class="page-header">
   <nav class="page-header__nav main-nav">
-    <a href="#" class="main-nav__logo">
-      <img src="http://placehold.it/86x35" alt="MiSHKA" class="main-nav__logo-image">
-    </a>
-    <div class="main-nav__toggle"></div>
-    <ul class="main-nav__list site-list">
-      <li class="site-list__item"><a href="catalog.html" class="site-list__link">Каталог товаров</a></li>
-      <li class="site-list__item"><a href="form.html" class="site-list__link">Вязание на заказ</a></li>
-    </ul>
-    <ul class="main-nav__list user-list">
-      <li class="user-list__item"><a class="user-list__link user-list__link--search" href="#">Поиск посайту</a></li>
-      <li class="user-list__item"><a class="user-list__link user-list__link--basket" href="#">Корзина: <span class="user-list__count">пока пуста</span></a></li>
-    </ul>
+    <div class="main-nav__container">
+      <a href="#" class="main-nav__logo">
+        <img src="img/logo-mobile.svg" alt="MiSHKA" class="main-nav__logo-image">
+      </a>
+      <div class="main-nav__toggle"></div>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item"><a href="catalog.html" class="site-list__link">Каталог товаров</a></li>
+        <li class="site-list__item"><a href="form.html" class="site-list__link site-list__link--order">Вязание на заказ</a></li>
+      </ul>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--search" href="#">Поиск посайту</a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--basket" href="#">Корзина: <span
+            class="user-list__count">пока пуста</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="main-nav__list news-list">
+        <li class="news-list__item">
+          <a class="news-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="news-list__item">
+          <a class="news-list__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <a class="main-nav__promo" href="#" href="#">Бесплатная доставка по Росcии</a>
+    </div>
   </nav>
   <h1 class="page-header__title">Вязание на заказ</h1>
 </header>
-<main class="main-content">
-  <section class="main-content__section order">
-    <p class="order__promo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+<main class="main-content order">
+    <p class="order__promo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
+      с вами, чтобы уточнить детали.</p>
     <form action="https://echo.htmlacademy.ru" class="order__form">
       <fieldset class="order__container fields-group">
         <legend class="fields-group__title">тип</legend>
-        <label for="accessory" class="fields-group__label">Аксессуар для интерьера</label>
-        <label for="toy" class="fields-group__label">Детская игрушка</label>
-        <input type="radio" name="type" id="accessory" class="fields-group__radio visually-hidden" checked>
-        <input type="radio" name="type" id="toy" class="fields-group__radio visually-hidden">
+        <div class="fields-group__wrapper fields-group__wrapper--col">
+          <input type="radio" name="type" id="accessory" class="fields-group__radio visually-hidden" checked>
+          <label for="accessory" class="fields-group__label fields-group__label--radio">Аксессуар для интерьера</label>
+          <input type="radio" name="type" id="toy" class="fields-group__radio visually-hidden">
+          <label for="toy" class="fields-group__label fields-group__label--radio">Детская игрушка</label>
+        </div>
       </fieldset>
-      <fieldset class="order__container fields-group">
-        <legend class="fields-group__title">цвет</legend>
-        <label for="white" class="fields-group__label">Белый</label>
-        <label for="gray" class="fields-group__label">Серый</label>
-        <label for="tiffany" class="fields-group__label">&#171Тиффани&#187</label>
-        <label for="black" class="fields-group__label">Черный</label>
-        <label for="pink" class="fields-group__label">Розовый</label>
-        <label for="orange" class="fields-group__label">Оранжевый</label>
-        <input type="checkbox" name="color" id="white" class="fields-group__checkbox visually-hidden" checked>
-        <input type="checkbox" name="color" id="gray" class="fields-group__checkbox visually-hidden" checked>
-        <input type="checkbox" name="color" id="tiffany" class="fields-group__checkbox visually-hidden">
-        <input type="checkbox" name="color" id="black" class="fields-group__checkbox visually-hidden">
-        <input type="checkbox" name="color" id="pink" class="fields-group__checkbox visually-hidden">
-        <input type="checkbox" name="color" id="orange" class="fields-group__checkbox visually-hidden">
-      </fieldset>
+      <div class="order__shadow">
+        <fieldset class="order__container fields-group">
+          <legend class="fields-group__title">цвет</legend>
+          <div class="fields-group__wrapper">
+            <input type="checkbox" name="color" id="white" class="fields-group__checkbox visually-hidden" checked>
+            <label for="white" class="fields-group__label  fields-group__label--checkbox">Белый</label>
+            <input type="checkbox" name="color" id="gray" class="fields-group__checkbox visually-hidden" checked>
+            <label for="gray" class="fields-group__label fields-group__label--checkbox">Серый</label>
+            <input type="checkbox" name="color" id="tiffany" class="fields-group__checkbox visually-hidden">
+            <label for="tiffany" class="fields-group__label fields-group__label--checkbox">&#171Тиффани&#187</label>
+            <input type="checkbox" name="color" id="black" class="fields-group__checkbox visually-hidden">
+            <label for="black" class="fields-group__label fields-group__label--checkbox">Черный</label>
+            <input type="checkbox" name="color" id="pink" class="fields-group__checkbox visually-hidden">
+            <label for="pink" class="fields-group__label fields-group__label--checkbox">Розовый</label>
+            <input type="checkbox" name="color" id="orange" class="fields-group__checkbox visually-hidden">
+            <label for="orange" class="fields-group__label fields-group__label--checkbox">Оранжевый</label>
+          </div>
+        </fieldset>
+      </div>
       <fieldset class="order__container fields-group">
         <legend class="fields-group__title">фио</legend>
-        <label for="name" class="fields-group__label" >Имя:</label>
-        <input type="text" name="full-name" id="name" placeholder="Введите ваше имя*" class="fields-group__text" required>
-        <label for="last-name" class="fields-group__label">Фамилия:</label>
-        <input type="text" name="full-name" id="last-name" placeholder="Укажите фамилию*" class="fields-group__text" required>
-        <label for="middle-name" class="fields-group__label">Отчество:</label>
-        <input type="text" name="full-name" id="middle-name" placeholder="Отчество, если желаете" class="fields-group__text">
+        <div class="fields-group__wrapper">
+          <label for="name" class="fields-group__label fields-group__label--fn">Имя:</label>
+          <input type="text" name="full-name" id="name" placeholder="Введите ваше имя*" class="fields-group__text"
+                  required>
+          <label for="last-name" class="fields-group__label  fields-group__label--fn">Фамилия:</label>
+          <input type="text" name="full-name" id="last-name" placeholder="Укажите фамилию*" class="fields-group__text"
+                  required>
+          <label for="middle-name" class="fields-group__label  fields-group__label--fn">Отчество:</label>
+          <input type="text" name="full-name" id="middle-name" placeholder="Отчество, если желаете"
+                  class="fields-group__text">
+        </div>
       </fieldset>
+      <div class="order__shadow">
       <fieldset class="order__container fields-group">
         <legend class="fields-group__title">тел</legend>
-        <label for="phone" class="fields-group__label visually-hidden">телефон</label>
-        <input type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*" class="fields-group__text" pattern="+7[0-9]{3} [0-9]{4}" required>
+        <div class="fields-group__wrapper">
+          <label for="phone" class="fields-group__label visually-hidden">телефон</label>
+          <input type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*"
+                  class="fields-group__text  fields-group__text--phone" pattern="+7[0-9]{3} [0-9]{4}" required>
+        </div>
       </fieldset>
       <fieldset class="order__container fields-group">
-        <legend class="fields-group__title visually-hidden">e-mail</legend>
-        <label for="e-mail" class="fields-group__label">e-mail</label>
-        <input type="email" name="e-mail" id="e-mail" placeholder="Ваш Email*" class="fields-group__text" required>
+        <legend class="fields-group__title fields-group__title--wide ">e-mail</legend>
+        <div class="fields-group__wrapper">
+          <label for="e-mail" class="fields-group__label visually-hidden">e-mail</label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="Ваш Email*" class="fields-group__text  fields-group__text--email" required>
+        </div>
       </fieldset>
+      </div>
       <fieldset class="order__container fields-group">
         <legend class="fields-group__title">доп</legend>
-        <label for="comment" class="fields-group__label"></label>
-        <textarea name="comment" id="comment" rows="10" placeholder="Опишите все ваши пожелания к заказу" class="fields-group__comment"></textarea>
+        <div class="fields-group__wrapper">
+          <label for="comment" class="fields-group__label visually-hidden">Комментарий к заказу</label>
+          <textarea name="comment" id="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"
+                    class="fields-group__comment"></textarea>
+        </div>
       </fieldset>
+      <div class="order__wrapper">
       <p class="order__reminder">*Поля обязательны для заполнения</p>
-      <input type="submit" class="order__button site-button" value="отправить заказ"></form>
+      <input type="submit" class="order__button site-button" value="отправить заказ">
+      </div>
+    </form>
   </section>
 </main>
 <!--site footer part -->
 <footer class="site-footer">
-  <ul class="site-footer__block social-list">
-    <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--instagram"></a></li>
-    <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--facebook"></a></li>
-    <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--twitter"></a></li>
-  </ul>
-  <p class="site-footer__block developer">Разработано <a class="developer__link-icon invisible-text" href="https://up.htmlacademy.ru/adaptive/12">htmlacademy</a></p>
+  <div class="site-footer__container">
+    <a href="#" class="site-footer__logo">
+      <img src="img/logo-mobile.svg" alt="MiSHKA" class="site-footer__logo-image">
+    </a>
+    <ul class="site-footer__block social-list">
+      <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--instagram"></a></li>
+      <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--facebook"></a></li>
+      <li class="social-list__item"><a href="#" class="social-list__icon social-list__icon--twitter"></a></li>
+    </ul>
+    <p class="site-footer__block developer">Разработано <a class="developer__link-icon invisible-text"
+                                                            href="https://up.htmlacademy.ru/adaptive/12">htmlacademy</a>
+    </p>
+  </div>
 </footer>
 </body>
 </html>

@@ -1,19 +1,137 @@
-.catalog-nav__list {
+.catalog-nav {
   @include ls-terminate;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 206px;
+}
+
+.catalog-nav__item {
+  flex-grow: 1;
+
+  &:first-of-type {
+    background-color: $decor-color;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
+  }
+
+  &:last-of-type {
+    background-color: #56c3b2;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+  }
 }
 
 .catalog-nav__link {
-  text-decoration: none;
+  display: block;
+  width: $mobile-content-width;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 43px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-right: 90px;
   color: #ffffff;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.5;
+  }
+
+  &--first {
+    &::after {
+      width: 40px;
+      height: 62px;
+      top: 22px;
+      right: 7px;
+      background: url("../img/icon-interior.svg") no-repeat;
+    }
+  }
+
+  &--second {
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 20px;
+      right: -2px;
+      background: url("../img/icon-toy.svg") no-repeat;
+    }
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+    top: 15px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.catalog-nav__link--first {
-  background-color: $decor-color;
+@media (min-width: $tablet-width) {
+  .catalog-nav {
+    font-size: 20px;
+    line-height: 30px;
+    flex-direction: row;
+    width: $tablet-content-width;
+    margin: 0 auto;
+    min-height: 120px;
+  }
+
+  .catalog-nav__link {
+    padding-top: 30px;
+
+    &--first {
+      &::after {
+        top: 32px;
+        right: 0;
+      }
+    }
+
+    &--second {
+      &::after {
+        top: 32px;
+      }
+    }
+  }
 }
 
-.catalog-nav__link--second {
-  background-color: #56c3b2;
+@media (min-width: $desktop-width) {
+  .catalog-nav {
+    width: $desktop-content-width;
+    min-height: 116px;
+  }
+
+  .catalog-nav__link {
+    margin: 0;
+    box-sizing: content-box;
+    width: 120px;
+    padding-top: 28px;
+    padding-left: 36px;
+    padding-right: 355px;
+    padding-bottom: 30px;
+
+    &--first {
+      &::after {
+        top: 30px;
+        right: 23px;
+      }
+    }
+
+    &--second {
+      &::after {
+        right: 22px;
+      }
+    }
+  }
 }

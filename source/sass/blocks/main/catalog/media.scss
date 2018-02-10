@@ -1,6 +1,11 @@
 .media {
-  width: 258px;
-  border: 1px solid $border-color;
+  width: $mobile-content-width;
+  margin-bottom: 58px;
+  position: relative;
+
+  &:hover > .media__description {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .media__title {
@@ -8,6 +13,31 @@
   font-size: 17px;
   line-height: 24px;
   color: $title-color;
+  margin: 0;
+  padding: 25px 37px 175px 88px;
+  border-bottom: none;
+}
+
+.media__content {
+  display: block;
+  position: absolute;
+  top: 98px;
+}
+
+.media__icon {
+  display: block;
+  width: 103px;
+  height: 78px;
+  position: absolute;
+  left: 50%;
+  top: 135px;
+  z-index: 10;
+  transform: translateX(-50%);
+  background-image: url("../img/icon-play.svg");
+}
+
+.media__description {
+  border: 1px solid $border-color;
 }
 
 .media__promo {
@@ -15,4 +45,90 @@
   font-size: 13px;
   line-height: 24px;
   color: $text-color;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 27px 33px 0 33px;
+}
+
+.media__button {
+  margin: 0 33px 32px 33px;
+}
+
+@media (min-width: $tablet-width) {
+  .media {
+    display: flex;
+    flex-direction: column;
+    width: $tablet-content-width;
+    margin-bottom: 63px;
+  }
+
+  .media__description {
+    padding: 35px 42px;
+    padding-bottom: 44px;
+  }
+
+  .media__content {
+    position: static;
+    width: 668px;
+    height: 455px;
+  }
+
+  .media__icon {
+    top: 190px;
+  }
+
+  .media__title {
+    font-size: 20px;
+    order: 2;
+    padding: 0 62px;
+    margin-bottom: 33px;
+  }
+
+  .media__promo {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+  .media__button {
+    margin: 0;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .media {
+    width: 366px;
+    min-height: 455px;
+    margin-left: 682px;
+    margin-bottom: 105px;
+  }
+
+  .media__description {
+    padding: 0 55px 60px 78px;
+  }
+
+  .media__title {
+    padding: 95px 120px 0 0;
+  }
+
+  .media__promo {
+    margin-bottom: 45px;
+  }
+
+  .media__content {
+    width: 682px;
+    position: absolute;
+    top: 0;
+    left: -682px;
+  }
+
+  .media__icon {
+    left: -340px;
+  }
+
+  .media__button {
+    margin: 0;
+  }
 }

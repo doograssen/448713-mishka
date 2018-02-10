@@ -1,4 +1,55 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  top: 237px;
+  width: 100%;
+}
+
 .user-list__link {
+  display: block;
   text-decoration: none;
   color: $title-color;
+  padding: 27px 0;
+  padding-left: 75px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .user-list__link {
+    padding-top: 30px;
+    padding-bottom: 33px;
+    padding-left: 0;
+    border: none;
+
+    &--search {
+      font-size: 0;
+      width: 84px;
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+    }
+
+    &--basket {
+      padding-left: 82px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    order: 3;
+  }
 }
