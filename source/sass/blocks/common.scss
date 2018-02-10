@@ -1,10 +1,26 @@
 $title-color: #000000;
 $text-color: #444444;
 $decor-color: #63d1bb;
+$control-color: #62d1ba;
 $border-color: #ededed;
-$main-image: url("../../img/hero-mobile@1x.jpg");
+$main-image: url("../img/hero-mobile@1x.jpg");
+$left-arrow: url("../img/icon-left-arrow.svg");
+$right-arrow: url("../img/icon-right-arrow.svg");
+$flower: url("../img/icon-feature-flower.svg");
+$present: url("../img/icon-feature-gift.svg");
+$ball: url("../img/icon-feature-ball.svg");
+$money: url("../img/icon-feature-money.svg");
+$rocket: url("../img/icon-feature-rocket.svg");
+$heart: url("../img/icon-feature-heart.svg");
+$insta: url("../img/icon-insta.svg");
+$facebook: url("../img/icon-fb.svg");
+$twitter: url("../img/icon-twitter.svg");
 $mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
 $mobile-content-width: 260px;
+$tablet-content-width: 668px;
+$desktop-content-width: 1050px;
 
 @mixin ls-terminate {
   margin: 0;
@@ -14,4 +30,41 @@ $mobile-content-width: 260px;
 
 @mixin family {
   font-family: "Open Sans", "Tahoma", sans-serif;
+}
+
+@mixin radio($point, $point-color, $border, $shadow, $shadow-color) {
+  width: $point;
+  height: $point;
+  background-color: $point-color;
+  border: $border solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 $shadow $shadow-color;
+}
+
+@mixin canvas($x, $y) {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  left: $x;
+  top: $y;
+}
+
+@mixin box($box-w, $box-h, $border, $border-color) {
+  width: $box-w;
+  height: $box-h;
+  border: $border solid $border-color;
+}
+
+@mixin check($width, $height, $angle, $border, $border-color) {
+  width: $width;
+  height: $height;
+  border: $border solid $border-color;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg);
+}
+
+@mixin hover {
+  border-color: $control-color;
 }

@@ -1,8 +1,14 @@
+.response-slider__title {
+  margin-bottom: 24px;
+}
+
 .response-slider__text {
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
   color: $text-color;
+  margin: 0;
+  margin-bottom: 27px;
 }
 
 .response-slider__author {
@@ -10,6 +16,8 @@
   font-size: 17px;
   line-height: 24px;
   color: $title-color;
+  margin: 0;
+  margin-bottom: 4px;
 }
 
 .response-slider__author-link {
@@ -18,8 +26,79 @@
   line-height: 30px;
   color: $text-color;
   text-decoration: none;
+  display: block;
+  margin-bottom: 28px;
 }
 
 .response-slider__controls {
   @include ls-terminate;
+  font-size: 0;
+  margin-bottom: 38px;
+}
+
+@import "../common/slider-controls.scss";
+
+.response-slider__button {
+  width: 256px;
+  margin-bottom: 44px;
+}
+
+@media (min-width: $tablet-width) {
+  .response-slider {
+    position: relative;
+    padding-bottom: 86px;
+  }
+
+  .response-slider__title {
+    margin-bottom: 50px;
+  }
+
+  .response-slider__text {
+    font-size: 17px;
+    margin-bottom: 56px;
+  }
+
+  .response-slider__author {
+    font-size: 18px;
+  }
+
+  .response-slider__controls {
+    position: absolute;
+    bottom: 79px;
+    right: 0;
+  }
+
+  .response-slider__button {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 171px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .response-slider {
+    padding-bottom: 134px;
+  }
+
+  .response-slider__title {
+    margin-bottom: 49px;
+  }
+
+  .response-slider__text {
+    margin-bottom: 39px;
+    padding-right: 105px;
+  }
+
+  .response-slider__author {
+    font-size: 17px;
+  }
+
+  .response-slider__controls {
+    bottom: 128px;
+  }
+
+  .response-slider__button {
+    top: 9px;
+  }
 }

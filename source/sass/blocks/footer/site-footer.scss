@@ -1,6 +1,44 @@
 .site-footer {
   @include family;
-  width: $mobile-width;
+  min-height: 160px;
+  background-color: #f1f1f1;
+}
+
+.site-footer__container {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-content-width;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.site-footer__logo {
+  display: none;
+}
+
+
+@media (min-width: $tablet-width) {
+  .site-footer {
+    min-height: 143px;
+  }
+
+  .site-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: $tablet-content-width;
+    padding-top: 50px;
+  }
+
+  .site-footer__logo {
+    display: block;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .site-footer__container {
+    width: $desktop-content-width;
+  }
 }
 
 @import "developer.scss";

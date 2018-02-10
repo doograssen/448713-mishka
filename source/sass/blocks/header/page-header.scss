@@ -1,22 +1,93 @@
 .page-header {
   @include family;
-  width: $mobile-width;
-  background-image: $main-image;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  min-height: 255px;
+  background-image: none;
+  background-color: #f1f1f1;
   background-repeat: no-repeat;
 }
 
-.page-header__nav {
-  min-height: 80px;
+.page-header--main {
+  min-height: 568px;
+  background-image: $main-image;
 }
-
-@import "main-nav";
-@import "site-list";
-@import "user-list";
-@import "catalog-nav";
 
 .page-header__title {
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
   color: $title-color;
+  width: $mobile-content-width;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding-top: 70px;
+  text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+    min-height: 314px;
+
+    &--main {
+      min-height: 833px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 0;
+      border-bottom: 11px solid;
+      border-image-source: url("../img/zigzag-fill.png");
+      border-image-slice: 0 0 11 0;
+      border-image-repeat: round;
+    }
+  }
+
+  .page-header__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: $tablet-content-width;
+    padding-top: 93px;
+
+    &--main {
+      padding-top: 153px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    min-height: 340px;
+
+    &--main {
+      min-height: 833px;
+    }
+
+    &::after {
+      border-image-source: url("../img/zigzag-fill-2.png");
+      border-bottom: 15px solid;
+      border-image-slice: 0 0 15 0;
+    }
+  }
+
+  .page-header__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    &--main {
+      padding-top: 153px;
+    }
+  }
+}
+
+@import "main-nav";
+@import "site-list";
+@import "user-list";
+@import "news-list";
+@import "catalog-nav";

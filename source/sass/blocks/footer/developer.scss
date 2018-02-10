@@ -3,4 +3,19 @@
   font-size: 19px;
   line-height: 18px;
   color: $title-color;
+  width: $mobile-content-width;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 27px;
+  padding-right: 55px;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: $tablet-width) {
+  .developer {
+    padding-top: 0;
+    border: none;
+    width: auto;
+  }
 }

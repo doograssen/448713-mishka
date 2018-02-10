@@ -1,3 +1,36 @@
-.slider-controls__button {
+.slider-controls__item {
+  display: inline-block;
   border: 1px solid #ececec;
+}
+
+.slider-controls__button {
+  display: block;
+  width: 128px;
+  height: 50px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.slider-controls__button--left {
+  background: $left-arrow no-repeat 50% 50%;
+}
+
+.slider-controls__button--right {
+  background: $right-arrow no-repeat 50% 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .slider-controls__item {
+    border: none;
+  }
+
+  .slider-controls__button {
+    width: 86px;
+  }
 }
