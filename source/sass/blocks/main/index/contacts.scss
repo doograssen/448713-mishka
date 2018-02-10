@@ -1,0 +1,11 @@
+.contacts__variants {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: $text-color;
+  border-bottom: 1px solid $decor-color;
+}

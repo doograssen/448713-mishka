@@ -1,0 +1,6 @@
+@import "card";
+@import "media";
+
+.catalog__goods-list {
+  @include ls-terminate;
+}

@@ -1,0 +1,7 @@
+.site-footer {
+  @include family;
+  width: $mobile-width;
+}
+
+@import "developer.scss";
+@import "social-list.scss";

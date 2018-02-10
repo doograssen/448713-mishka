@@ -1,0 +1,19 @@
+.catalog-nav__list {
+  @include ls-terminate;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.catalog-nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.catalog-nav__link--first {
+  background-color: $decor-color;
+}
+
+.catalog-nav__link--second {
+  background-color: #56c3b2;
+}

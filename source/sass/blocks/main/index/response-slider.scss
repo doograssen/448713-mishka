@@ -1,0 +1,25 @@
+.response-slider__text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: $text-color;
+}
+
+.response-slider__author {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.response-slider__author-link {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: $text-color;
+  text-decoration: none;
+}
+
+.response-slider__controls {
+  @include ls-terminate;
+}

@@ -1,0 +1,18 @@
+.media {
+  width: 258px;
+  border: 1px solid $border-color;
+}
+
+.media__title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.media__promo {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: $text-color;
+}
