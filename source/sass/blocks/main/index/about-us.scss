@@ -1,0 +1,9 @@
+.about-us__feature-list {
+  @include ls-terminate;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $title-color;
+}
+
+@import "response-slider";

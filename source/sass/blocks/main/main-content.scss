@@ -1,0 +1,17 @@
+.main-content {
+  @include family;
+  width: $mobile-width;
+}
+
+.main-content__section {
+  width: $mobile-content-width;
+  margin: 0 auto;
+}
+
+@import "common/site-button.scss";
+@import "common/site-title.scss";
+@import "index/special-offer.scss";
+@import "index/about-us.scss";
+@import "index/contacts.scss";
+@import "form/order.scss";
+@import "catalog/catalog.scss";

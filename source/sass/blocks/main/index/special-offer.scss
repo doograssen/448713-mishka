@@ -1,0 +1,28 @@
+.special-offer__marker {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $decor-color;
+  text-transform: uppercase;
+}
+
+.special-offer__description {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text-color;
+}
+
+.special-offer__properties {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $text-color;
+}
+
+.special-offer__price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $text-color;
+}

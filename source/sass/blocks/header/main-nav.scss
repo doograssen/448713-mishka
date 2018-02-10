@@ -1,0 +1,6 @@
+.main-nav__list {
+  @include ls-terminate;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+}
