@@ -3,8 +3,8 @@
 }*/
 
 .about-us__title {
-  margin-top: 27px;
-  margin-bottom: 3px;
+  margin-top: 30px;
+  /*margin-bottom: 3px;*/
 }
 
 .about-us__feature-list {
@@ -13,9 +13,6 @@
   font-size: 17px;
   line-height: 20px;
   color: $title-color;
-}
-
-.about-us__item:last-of-type {
   margin-bottom: 55px;
 }
 
@@ -120,8 +117,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 500px;
-    margin-bottom: 97px;
+    height: 465px;
+    margin-bottom: 55px;
   }
 
   .about-us__item {
@@ -152,11 +149,12 @@
   }
 
   .about-us__title {
-    margin-top: 58px;
+    margin-top: 60px;
   }
 
   .about-us__feature-list {
     padding-right: 172px;
+    margin-bottom: 62px;
   }
 }
 

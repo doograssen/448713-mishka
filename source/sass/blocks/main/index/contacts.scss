@@ -12,11 +12,12 @@
   font-size: 15px;
   line-height: 30px;
   margin-bottom: 37px;
+  width: 100%;
   border-collapse: collapse;
 }
 
 .contacts__kind {
-  width: 75px;
+  width: 35%;
   padding: 0;
   padding-bottom: 29px;
   vertical-align: top;
@@ -68,7 +69,7 @@
 }
 
 .contacts__button {
-  width: $mobile-content-width - 4;
+  width: calc(100% - 4px);
   margin-bottom: 39px;
 }
 
@@ -116,7 +117,7 @@
   .contacts__map {
     position: relative;
     left: -50px;
-    width: 768px;
+    width: calc(100% + 100px);
     height: 457px;
     margin-bottom: 56px;
   }
@@ -136,7 +137,7 @@
 
   .contacts__title {
     &::after {
-      top: -10px;
+      top: -8px;
       left: 64px;
     }
   }

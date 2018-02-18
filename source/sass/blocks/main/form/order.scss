@@ -3,17 +3,18 @@
 .order {
   width: auto;
   margin: 0;
+  padding: 0 30px;
 }
 
 .order__promo {
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
-  width: $mobile-content-width;
   text-color: $text-color;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   margin-top: 23px;
-  padding-bottom: 3px;
+  margin-bottom: 31px;
+  /*padding-bottom: 3px;*/
 }
 
 .order__reminder {
@@ -21,20 +22,36 @@
   font-size: 14px;
   line-height: 16px;
   color: $text-color;
+  margin-top: 17px;
   margin-bottom: 30px;
 }
 
 .order__button {
   @include family;
-  width: $mobile-content-width;
+  width: 100%;
   padding: 0;
   margin-bottom: 55px;
 }
 
 
 @media (min-width: $tablet-width) {
-  .order__shadow {
-    background-color: #f1f1f1;
+  .order {
+    padding: 0 50px;
+  }
+
+  .order__contacts {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 100vw;
+      height: 100%;
+      background-color: #f1f1f1;
+    }
   }
 
   .order__wrapper {
@@ -42,24 +59,23 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
-    width: $tablet-content-width;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 50px;
   }
 
   .order__promo {
     font-size: 17px;
     line-height: 30px;
-    width: $tablet-content-width;
-    margin: 0 auto;
-    margin-top: 73px;
-    padding: 0 50px;
-    padding-bottom: 3px;
+    width: 100%;
+    margin: 0;
+    margin-top: 71px;
+    margin-bottom: 8px;
   }
 
   .order__reminder {
     font-size: 17px;
     line-height: 30px;
+    margin: 0;
   }
 
   .order__button {
@@ -70,15 +86,28 @@
 
 @media (min-width: $desktop-width) {
   .order {
-    width: auto;
+    width: $desktop-content-width;
+    margin: 0 auto;
+    margin-top: 124px;
     padding: 0;
   }
 
   .order__promo {
-    box-sizing: border-box;
     width: 700px;
-    margin-top: 125px;
-    padding: 0;
-    padding-bottom: 9px;
+    padding-left: 175px;
+  }
+
+  .order__contacts::before {
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .order__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }

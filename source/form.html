@@ -36,7 +36,7 @@
           <a class="news-list__link" href="#">Распродажа</a>
         </li>
       </ul>
-      <a class="main-nav__promo" href="#" href="#">Бесплатная доставка по Росcии</a>
+      <a class="main-nav__promo" href="#">Бесплатная доставка по Росcии</a>
     </div>
   </nav>
   <h1 class="page-header__title">Вязание на заказ</h1>
@@ -45,17 +45,17 @@
     <p class="order__promo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
       с вами, чтобы уточнить детали.</p>
     <form action="https://echo.htmlacademy.ru" class="order__form">
-      <fieldset class="order__container fields-group">
+      <fieldset class="order__container fields-group fields-group--check">
         <legend class="fields-group__title">тип</legend>
-        <div class="fields-group__wrapper fields-group__wrapper--col">
+        <div class="fields-group__wrapper">
           <input type="radio" name="type" id="accessory" class="fields-group__radio visually-hidden" checked>
           <label for="accessory" class="fields-group__label fields-group__label--radio">Аксессуар для интерьера</label>
           <input type="radio" name="type" id="toy" class="fields-group__radio visually-hidden">
           <label for="toy" class="fields-group__label fields-group__label--radio">Детская игрушка</label>
         </div>
       </fieldset>
-      <div class="order__shadow">
-        <fieldset class="order__container fields-group">
+      <!--<div class="order__shadow">-->
+        <fieldset class="order__container fields-group fields-group--check">
           <legend class="fields-group__title">цвет</legend>
           <div class="fields-group__wrapper">
             <input type="checkbox" name="color" id="white" class="fields-group__checkbox visually-hidden" checked>
@@ -72,8 +72,8 @@
             <label for="orange" class="fields-group__label fields-group__label--checkbox">Оранжевый</label>
           </div>
         </fieldset>
-      </div>
-      <fieldset class="order__container fields-group">
+      <!--</div>-->
+      <fieldset class="order__container fields-group fields-group--fio">
         <legend class="fields-group__title">фио</legend>
         <div class="fields-group__wrapper">
           <label for="name" class="fields-group__label fields-group__label--fn">Имя:</label>
@@ -87,8 +87,8 @@
                   class="fields-group__text">
         </div>
       </fieldset>
-      <div class="order__shadow">
-      <fieldset class="order__container fields-group">
+      <div class="order__contacts">
+      <fieldset class="order__container fields-group fields-group--contacts">
         <legend class="fields-group__title">тел</legend>
         <div class="fields-group__wrapper">
           <label for="phone" class="fields-group__label visually-hidden">телефон</label>
@@ -96,7 +96,7 @@
                   class="fields-group__text  fields-group__text--phone" pattern="+7[0-9]{3} [0-9]{4}" required>
         </div>
       </fieldset>
-      <fieldset class="order__container fields-group">
+      <fieldset class="order__container fields-group  fields-group--contacts">
         <legend class="fields-group__title fields-group__title--wide ">e-mail</legend>
         <div class="fields-group__wrapper">
           <label for="e-mail" class="fields-group__label visually-hidden">e-mail</label>
@@ -108,7 +108,7 @@
         <legend class="fields-group__title">доп</legend>
         <div class="fields-group__wrapper">
           <label for="comment" class="fields-group__label visually-hidden">Комментарий к заказу</label>
-          <textarea name="comment" id="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"
+          <textarea name="comment" id="comment" placeholder="Опишите все ваши пожелания к заказу"
                     class="fields-group__comment"></textarea>
         </div>
       </fieldset>
