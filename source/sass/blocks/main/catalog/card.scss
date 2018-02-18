@@ -1,7 +1,7 @@
 .card {
   text-decoration: none;
   display: block;
-  width: $mobile-content-width;
+  width: 100%;
 
   &:hover > .card__description {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
@@ -26,6 +26,7 @@
   color: $title-color;
   margin: 0;
   margin-top: 25px;
+  margin-bottom: 6px;
 }
 
 .card__attributes {
@@ -34,7 +35,6 @@
   line-height: 30px;
   color: $text-color;
   margin: 0;
-  margin-top: 6px;
 }
 
 .card__price {
@@ -52,7 +52,7 @@
   .card {
     display: flex;
     width: auto;
-    min-height: 335px;
+
 
     &:hover > .card__description {
       box-shadow: 6px 0 10px rgba(0, 0, 0, 0.3);
@@ -60,12 +60,13 @@
   }
 
   .card__image {
-    flex-basis: 333px;
+    flex-basis: 50%;
     flex-shrink: 0;
   }
 
   .card__description {
-    flex-basis: 334px;
+    min-height: 333px;
+    flex-basis: 50%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -76,12 +77,12 @@
   .card__title {
     font-size: 20px;
     width: 240px;
-    margin-top: 26px;
+    margin-top: 24px;
+    margin-bottom: 5px;
   }
 
   .card__attributes {
     font-size: 15px;
-    margin-top: 5px;
   }
 
   .card__price {
@@ -112,6 +113,10 @@
   .card__image {
     width: 316px;
     height: 462px;
+  }
+
+  .card__title {
+    margin-bottom: 7px;
   }
 
   .card__description {

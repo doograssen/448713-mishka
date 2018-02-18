@@ -1,11 +1,11 @@
 .slider-controls__item {
   display: inline-block;
+  width: calc(50% - 4px);
   border: 1px solid #ececec;
 }
 
 .slider-controls__button {
   display: block;
-  width: 128px;
   height: 50px;
 
   &:hover {

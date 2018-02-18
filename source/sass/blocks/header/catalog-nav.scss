@@ -1,15 +1,14 @@
 .catalog-nav {
-  @include ls-terminate;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   min-height: 206px;
 }
 
 .catalog-nav__item {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
 
   &:first-of-type {
     background-color: $decor-color;
@@ -30,14 +29,16 @@
 
 .catalog-nav__link {
   display: block;
-  width: $mobile-content-width;
-  box-sizing: border-box;
+  width: 130px;
+ /* width: $mobile-content-width;*/
+  /*box-sizing: border-box;*/
   position: relative;
   min-height: 43px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   padding-top: 25px;
   padding-bottom: 30px;
-  padding-right: 90px;
+  padding-left: 30px;
+  padding-right: calc(100% - 160px);
   color: #ffffff;
   text-decoration: none;
 
@@ -53,7 +54,7 @@
       width: 40px;
       height: 62px;
       top: 22px;
-      right: 7px;
+      right: 37px;
       background: url("../img/icon-interior.svg") no-repeat;
     }
   }
@@ -63,7 +64,7 @@
       width: 60px;
       height: 60px;
       top: 20px;
-      right: -2px;
+      right: 28px;
       background: url("../img/icon-toy.svg") no-repeat;
     }
   }
@@ -82,14 +83,19 @@
   .catalog-nav {
     font-size: 20px;
     line-height: 30px;
+    display: flex;
     flex-direction: row;
-    width: $tablet-content-width;
-    margin: 0 auto;
-    min-height: 120px;
+    min-height: 116px;
+  }
+
+  .catalog-nav__item {
+    width: 50%;
   }
 
   .catalog-nav__link {
-    padding-top: 30px;
+    padding-left: 35px;
+    padding-top: 28px;
+    padding-bottom: 31px;
 
     &--first {
       &::after {

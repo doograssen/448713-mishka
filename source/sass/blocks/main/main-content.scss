@@ -1,7 +1,7 @@
 .main-content {
   @include family;
-  width: $mobile-width;
-  margin: 0 auto;
+  /*width: $mobile-width;
+  margin: 0 auto;*/
 }
 
 .main-content__section {
@@ -18,7 +18,7 @@
 
 @media (min-width: $tablet-width) {
   .main-content {
-    width: $tablet-width;
+    /*width: 100%;*/
   }
 
   .main-content__section {
@@ -30,7 +30,8 @@
 @media (min-width: $desktop-width) {
   .main-content {
     width: $desktop-content-width;
-    padding: 0 100px;
+    padding: 0;
+    margin: 0 auto;
   }
 
   .main-content__section {

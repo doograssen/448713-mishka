@@ -39,13 +39,14 @@
 @import "../common/slider-controls.scss";
 
 .response-slider__button {
-  width: 256px;
+  width: calc(100% - 4px);
   margin-bottom: 44px;
 }
 
 @media (min-width: $tablet-width) {
   .response-slider {
     position: relative;
+    padding-top: 76px;
     padding-bottom: 86px;
   }
 
@@ -70,7 +71,7 @@
 
   .response-slider__button {
     position: absolute;
-    top: 2px;
+    top: 80px;
     right: 0;
     width: 171px;
   }
@@ -78,6 +79,7 @@
 
 @media (min-width: $desktop-width) {
   .response-slider {
+    padding-top: 70px;
     padding-bottom: 134px;
   }
 
@@ -99,6 +101,6 @@
   }
 
   .response-slider__button {
-    top: 9px;
+    top: 80px;
   }
 }
