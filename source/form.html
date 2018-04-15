@@ -11,7 +11,11 @@
   <nav class="page-header__nav main-nav">
     <div class="main-nav__container">
       <a href="#" class="main-nav__logo">
-        <img src="img/logo-mobile.svg" alt="MiSHKA" class="main-nav__logo-image">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="86" height="35"alt="MiSHKA" class="main-nav__logo-image">
+        </picture>
       </a>
       <div class="main-nav__toggle"></div>
       <ul class="main-nav__list site-list">
@@ -135,5 +139,6 @@
     </p>
   </div>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -21,6 +21,8 @@ $desktop-width: 1150px;
 $mobile-content-width: 260px;
 $tablet-content-width: 668px;
 $desktop-content-width: 1050px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 @mixin ls-terminate {
   margin: 0;
@@ -68,3 +70,4 @@ $desktop-content-width: 1050px;
 @mixin hover {
   border-color: $control-color;
 }
+

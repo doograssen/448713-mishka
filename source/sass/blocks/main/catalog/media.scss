@@ -20,6 +20,9 @@
 }
 
 .media__content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   display: block;
   width: 100%;
 }
@@ -40,10 +43,6 @@
   background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
 }
-
-/*.media__description {
-
-}*/
 
 .media__promo {
   font-weight: normal;
@@ -76,19 +75,9 @@
     margin-bottom: 38px;
   }
 
-  /*.media__description {
-    order: 3;
-    padding: 35px 42px;
-    padding-bottom: 44px;
-  }*/
-
   .media__content {
-    position: static;
-    width: 100%;
-  }
-
-  .media__icon {
-    top: 190px;
+    /*position: static;
+    width: 100%;*/
   }
 
   .media__title {
@@ -150,10 +139,6 @@
     position: absolute;
     top: 0;
     left: -682px;
-  }
-
-  .media__icon {
-    /*left: -340px;*/
   }
 
   .media__button {

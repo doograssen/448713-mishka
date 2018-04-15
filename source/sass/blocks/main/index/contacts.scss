@@ -49,12 +49,18 @@
 
 .contacts__map {
   display: block;
-  width: 320px;
+  width: 100vw;
   height: 457px;
   position: relative;
   left: -30px;
   background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   margin-bottom: 40px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 .contacts__marker {
@@ -118,8 +124,15 @@
     position: relative;
     left: -50px;
     width: calc(100% + 100px);
-    height: 457px;
+    min-height: 457px;
     margin-bottom: 56px;
+    background-image: url("../img/map-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .contacts__button {
@@ -160,6 +173,11 @@
     left: auto;
     right: 0;
     width: 525px;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   .contacts__button {

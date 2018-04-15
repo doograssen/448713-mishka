@@ -11,9 +11,13 @@
   <nav class="page-header__nav main-nav">
     <div class="main-nav__container">
       <a href="#" class="main-nav__logo">
-        <img src="img/logo-mobile.svg" alt="MiSHKA" class="main-nav__logo-image">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="86" height="35"alt="MiSHKA" class="main-nav__logo-image">
+        </picture>
       </a>
-      <div class="main-nav__toggle"></div>
+      <button class="main-nav__toggle"></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item"><a href="catalog.html" class="site-list__link">Каталог товаров</a></li>
         <li class="site-list__item"><a href="form.html" class="site-list__link site-list__link--order">Вязание на заказ</a></li>
@@ -47,7 +51,11 @@
     <ul class="catalog__goods-list">
       <li class="catalog__goods-item">
         <a href="#" class="catalog__good-card card">
-          <img src="img/photo-hare-mobile@1x.jpg" width="100%" height="100%" alt="Заяц" class="card__image">
+          <picture class="card__image-container">
+            <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+            <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="100%" height="100%" alt="Заяц" class="card__image">
+          </picture>
           <div class="card__description">
             <h3 class="card__title">Зайчик-попрыгайчик</h3>
             <p class="card__attributes">Рост 30 см, вес 200 г</p>
@@ -57,7 +65,11 @@
       </li>
       <li class="catalog__goods-item">
         <a href="#" class="catalog__good-card card">
-          <img src="img/photo-bowl-mobile@1x.jpg" width="100%" height="100%" alt="Корзинка" class="card__image">
+          <picture class="card__image-container">
+            <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+            <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="100%" height="100%" alt="Корзинка" class="card__image">
+          </picture>
           <div class="card__description">
             <h3 class="card__title">Корзинка для белья</h3>
             <p class="card__attributes">Диаметр 15 см, высота 10 см</p>
@@ -67,7 +79,11 @@
       </li>
       <li class="catalog__goods-item">
         <a href="#" class="catalog__good-card card">
-          <img src="img/photo-toys-mobile@1x.jpg" width="100%" height="100%" alt="Большая корзинка" class="card__image">
+          <picture class="card__image-container">
+            <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img//photo-toys-tablet@2x.jpg 2x">
+            <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="100%" height="100%" alt="Большая корзинка" class="card__image">
+          </picture>
           <div class="card__description">
             <h3 class="card__title">Большая корзинка для игрушек</h3>
             <p class="card__attributes">Диаметр 30 см, высота 30 см</p>
@@ -82,7 +98,12 @@
       <!-- <div class="media__description">-->
       <h2 class="media__title">Процесс производства</h2>
       <div class="media__container">
-        <video src="" class="media__content" poster="img/video-mobile@1x.jpg"></video>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img//video-tablet@2x.jpg 2x">
+          <img src="../img/video-mobile@1x.jpg" width="100%" class="media__poster">
+        </picture>
+        <video src="" class="media__content"></video>
         <span class="media__icon"></span>
       </div>
       <p class="media__promo">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
@@ -122,5 +143,6 @@
     </p>
   </div>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>

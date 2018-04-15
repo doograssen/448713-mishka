@@ -29,12 +29,34 @@
   position: absolute;
   right: 30px;
   top: 33px;
+  display: block;
   width: 20px;
   height: 2px;
+  box-sizing: content-box;
+  padding: 0;
   background-color: black;
+  border: none;
   border-top: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
   box-shadow: 0 2px 0 0 #000000, 0 -2px 0 0 #000000;
+
+  &--close {
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-color: white;
+    box-shadow: none;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 3px;
+      position: absolute;
+      background-color: #000000;
+      transform: rotate(-90deg);
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
